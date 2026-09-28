@@ -1,0 +1,75 @@
+{
+  "name": "Liepa Café",
+  "assistantName": "Liepa AI",
+  "type": "café & brunch place in Kaunas",
+  "icon": "☕",
+  "theme": {
+    "primary": "#5a3a22",
+    "accent": "#e9b872",
+    "accentInk": "#2b1a0e",
+    "highlight": "#c0392b",
+    "radius": "16px"
+  },
+  "phone": "+370 600 00000",
+  "website": "example.lt",
+  "welcome": "Hi! 👋 I'm Liepa AI. Ask me about the menu, opening hours or allergens, or I can help you book a table.",
+  "chips": [
+    "What are your opening hours?",
+    "Any vegan options?",
+    "Book a table for Saturday"
+  ],
+  "info": {
+    "address": "Laisvės al. 00, Kaunas (demo address)",
+    "hours": {
+      "Monday-Friday": "08:00–21:00",
+      "Saturday": "09:00–22:00",
+      "Sunday": "10:00–20:00",
+      "Kitchen": "closes 1 hour before closing time"
+    },
+    "menu": {
+      "Coffee": [
+        "Espresso €2.20",
+        "Cappuccino €3.20",
+        "Flat white €3.50",
+        "Latte €3.50 (oat/almond milk +€0.50)"
+      ],
+      "Brunch (until 15:00)": [
+        "Eggs Benedict with smoked salmon €9.50 (gluten, eggs, fish, dairy)",
+        "Avocado toast with poached egg €8.00 (vegetarian; gluten, eggs)",
+        "Pancakes with berries €7.50 (vegetarian; gluten, eggs, dairy)",
+        "Granola bowl with coconut yogurt €6.50 (vegan, gluten-free)"
+      ],
+      "Mains": [
+        "Cepelinai with meat €8.50 (dairy)",
+        "Chicken Caesar salad €9.00 (gluten, eggs, dairy, fish)",
+        "Pumpkin risotto €10.00 (vegetarian, gluten-free; dairy)"
+      ],
+      "Desserts": [
+        "Honey cake €4.50 (gluten, eggs, dairy)",
+        "Cheesecake of the day €4.80 (gluten, eggs, dairy)"
+      ]
+    },
+    "extras": [
+      "Free Wi-Fi",
+      "Dog-friendly terrace (May–September)",
+      "Delivery via Wolt and Bolt Food",
+      "Groups over 8: please call"
+    ]
+  },
+  "rules": [
+    "For allergy questions, list the allergens and say to confirm with staff."
+  ],
+  "lead": {
+    "enabled": true,
+    "alertTitle": "New table request",
+    "purpose": "table reservation request (1–8 people, within opening hours)",
+    "fields": [
+      "name",
+      "date",
+      "time",
+      "people",
+      "phone"
+    ],
+    "confirmText": "Say the team will confirm the table by phone/SMS; it is not guaranteed yet."
+  }
+}

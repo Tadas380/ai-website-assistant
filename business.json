@@ -1,0 +1,134 @@
+{
+  "name": "Pulsas 24/7",
+  "assistantName": "Pulse AI",
+  "type": "24/7 gym chain in Kaunas, Lithuania (fictional business used for this demo)",
+  "icon": "P",
+  "buttonLabel": "Ask Pulse AI",
+  "theme": {
+    "primary": "#15171C",
+    "primaryInk": "#ffffff",
+    "accent": "#FF5A1F",
+    "accentInk": "#ffffff",
+    "highlight": "#FFC93C",
+    "radius": "12px",
+    "bg": "#F4F2EF",
+    "ink": "#1B1D22",
+    "font": "Manrope",
+    "displayFont": "Archivo",
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800;125,900&family=Manrope:wght@400;500;600;700;800&display=swap",
+    "displayStyle": "normal",
+    "displayStretch": "125%"
+  },
+  "defaultLanguage": "English",
+  "phone": "+370 600 00000",
+  "website": "pulsas.example",
+  "welcome": "Hi! 👋 I'm Pulse AI. Ask me about memberships, prices, our clubs or classes, or I can set you up with a free trial. Kalbu ir lietuviškai · Говорю и по-русски.",
+  "chips": [
+    "Which membership is cheapest?",
+    "Where are your clubs?",
+    "Can I try it for free?"
+  ],
+  "ui": {
+    "placeholder": "Type a message…",
+    "online": "Online · replies instantly",
+    "note": "Answers are AI-generated. Confirm important details with the team."
+  },
+  "info": {
+    "about": "Pulsas 24/7 is a gym chain with 4 clubs in Kaunas. Every club is open 24/7. 150+ group classes a week.",
+    "clubs": [
+      {
+        "name": "Pulsas Centras",
+        "district": "Centras (city centre)",
+        "extras": [
+          "sauna",
+          "group class studio",
+          "reformer studio"
+        ]
+      },
+      {
+        "name": "Pulsas Šilainiai",
+        "district": "Šilainiai",
+        "extras": [
+          "sauna",
+          "group class studio"
+        ]
+      },
+      {
+        "name": "Pulsas Dainava",
+        "district": "Dainava",
+        "extras": [
+          "functional training zone"
+        ]
+      },
+      {
+        "name": "Pulsas Eiguliai",
+        "district": "Eiguliai",
+        "extras": [
+          "opening in December, not open yet"
+        ]
+      }
+    ],
+    "memberships": [
+      {
+        "name": "Basic",
+        "price": "€17.90/month for the first 6 months, then €27.90/month",
+        "contract": "12-month minimum, then 30 days' notice",
+        "includes": "24/7 access to all clubs"
+      },
+      {
+        "name": "Plus",
+        "price": "€24.90/month for the first 6 months, then €39.90/month",
+        "contract": "12-month minimum, then 30 days' notice",
+        "includes": "24/7 access to all clubs + unlimited group classes"
+      },
+      {
+        "name": "Flex",
+        "price": "€34.90/month",
+        "contract": "no long contract, 30 days' notice",
+        "includes": "24/7 access to all clubs"
+      },
+      {
+        "name": "Student",
+        "price": "€19.90/month with a valid student ID",
+        "contract": "6-month minimum",
+        "includes": "24/7 access to all clubs"
+      }
+    ],
+    "includedInAllPlans": [
+      "sauna at clubs that have one",
+      "free introductory session with a trainer",
+      "freeze up to 30 days per year",
+      "Pulsas mobile app"
+    ],
+    "addOns": [
+      "Group classes for Basic/Flex/Student: €9.90/month",
+      "Personal training: from €25 per session",
+      "Towel service: €4.90/month"
+    ],
+    "trial": "Free 1-day trial at any open club. The team contacts the person to arrange it."
+  },
+  "rules": [
+    "Help people choose: cheapest over a year → Basic (or Student if they study); no long contract → Flex; wants group classes → Plus.",
+    "Never give medical, injury or diet advice. Suggest a doctor or a Pulsas trainer instead.",
+    "Don't invent class times, trainer names, equipment or parking. Point to the phone number instead."
+  ],
+  "lead": {
+    "enabled": true,
+    "alertTitle": "New free trial request",
+    "purpose": "free trial or a callback about memberships",
+    "fields": [
+      "name",
+      "phone",
+      "club",
+      "goal"
+    ],
+    "labels": {
+      "name": "Name",
+      "phone": "Phone",
+      "club": "Club",
+      "goal": "Goal",
+      "notes": "Notes"
+    },
+    "confirmText": "Say (in the customer's language) that the Pulsas team will contact them shortly to arrange it."
+  }
+}

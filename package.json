@@ -1,0 +1,13 @@
+{
+  "name": "ai-website-assistant",
+  "version": "1.0.0",
+  "description": "Embeddable AI chat assistant for small business websites: grounded answers, any language, lead capture. Zero dependencies.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" },
+  "author": "Tadas Kaziunas (https://github.com/Tadas380)",
+  "license": "MIT"
+}
