@@ -4,6 +4,10 @@ An embeddable AI chat assistant for small-business websites. It answers visitors
 
 One `<script>` tag adds it to any site. The backend is a single Node.js file with **zero npm dependencies**.
 
+### 🔴 [Live demo → ai-website-assistant-k9c7.onrender.com](https://ai-website-assistant-k9c7.onrender.com/)
+
+Open it and click **Ask Pulse AI**. Try English, Lithuanian or Russian, or ask for a free trial. The first visit can take up to a minute while the free server wakes up.
+
 > The demo business, **Pulsas 24/7**, is a fictional gym chain in Kaunas. Prices and clubs are made up.
 
 ![Demo gym website with the assistant open](docs/chat.png)
@@ -18,6 +22,7 @@ One `<script>` tag adds it to any site. The backend is a single Node.js file wit
 - **Drop-in widget.** Shadow DOM, so the host site's CSS can't break it (and vice versa). Themeable colours, fonts and radius; mobile full-screen mode; keyboard accessible; reduced-motion aware.
 - **Host page API.** `window.bizAssistant.open()` and `window.bizAssistant.ask("…")` let any button on the page start a conversation.
 - **Reusable for any business.** Swap `business.json` to turn it into a café, salon or car-service assistant (see `examples/cafe.json`).
+- **Resilient.** If Gemini is overloaded or rate-limited, the server retries and falls back to a lighter model, so visitors get an answer instead of an error.
 - **Safe defaults.** API key stays server-side, per-IP rate limiting, request size and history limits, CORS allow-list, path-traversal-safe static serving, HTML-escaped admin output.
 
 | Mobile | Owner's lead list |
@@ -42,6 +47,7 @@ sequenceDiagram
     V->>S: POST /api/chat {messages}
     S->>S: build system prompt from business.json
     S->>G: generateContent (system prompt + last 20 messages)
+    Note over S,G: retry, then fallback model if overloaded
     G-->>S: reply (+ optional [[LEAD]]{json} line)
     S->>S: strip lead line, save lead to data/leads.json
     S-->>T: webhook alert
@@ -79,6 +85,7 @@ No `npm install` is needed.
 |---|---|
 | `GEMINI_API_KEY` | required |
 | `GEMINI_MODEL` | default `gemini-flash-latest` |
+| `GEMINI_FALLBACK_MODELS` | comma-separated, used when the main model is busy (default `gemini-flash-lite-latest`) |
 | `ADMIN_KEY` | password for `/admin?key=…` |
 | `DISCORD_WEBHOOK_URL` | optional lead alerts |
 | `ALLOWED_ORIGINS` | sites allowed to embed the widget (`*` for any) |
@@ -121,7 +128,7 @@ This works on plain HTML, WordPress, Wix, Shopify and similar platforms. Set `AL
 npm test
 ```
 
-There are 11 tests using Node's built-in test runner. They cover the lead parser, the prompt builder, rate limiting, and the HTTP endpoints against a fake Gemini server, so no API key or network is needed.
+There are 15 tests using Node's built-in test runner. They cover the lead parser, the prompt builder, rate limiting, model retry and fallback, and the HTTP endpoints against a fake Gemini server, so no API key or network is needed.
 
 ## Deploy
 
