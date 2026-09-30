@@ -130,9 +130,6 @@ npm test
 
 There are 15 tests using Node's built-in test runner. They cover the lead parser, the prompt builder, rate limiting, model retry and fallback, and the HTTP endpoints against a fake Gemini server, so no API key or network is needed.
 
-## Deploy
-
-Any Node host works. On **Render** (free tier), create a Web Service with start command `node server.js` and set the environment variables above. On the free tier the disk isn't persistent, so treat webhook alerts as the durable record, or add a database.
 
 ## Limitations and next steps
 
